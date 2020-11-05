@@ -2,58 +2,60 @@
 
 ## Directory Structure
 
-```java
-app -- Amazon_shopping.apk
-screenshots -- 
-src
-|-- /main
-|   |-- /resources
-|   |   |-- log4j.properties
-|   |   `-- config.properties
-|   `--  java
-|       `--  com
-|           `--  amazon
-|               `--  utils
-|                   |--  Utils.java
-|                   `--  XlDataReader.java
-|--  test
-|   |--  java
-|   |   `--  com
-|   |       |--  enums
-|   |       |   `--  ScrollDirection.java
-|   |       |--  GlobalResource.java
-|   |       |--  modules
-|   |       |   |--  BasePage.java
-|   |       |   |--  checkout
-|   |       |   |   |--  PaymentPage.java
-|   |       |   |   |--  DeliverAddressPage.java
-|   |       |   |   `--  CheckoutPage.java
-|   |       |   |--  home
-|   |       |   |   `--  HomePage.java
-|   |       |   |--  product
-|   |       |   |   |--  Product.java
-|   |       |   |   |--  ProductDetailsPage.java
-|   |       |   |   `--  ProductListPage.java
-|   |       |   |--  account
-|   |       |   |   |--  AccountPage.java
-|   |       |   |   `--  LoginPage.java
-|   |       |   `--  cart
-|   |       |       `--  CartPage.java
-|   |       |--  dataprovider
-|   |       |   `--  DataP.java
-|   |       |--  testnglisteners
-|   |       |   |--  RetryAnalyzer.java
-|   |       |   `--  TestListener.java
-|   |       |--  util
-|   |       |   |--  ScrollAndSwipe.java
-|   |       |   `--  Constants.java
-|   |       `--  test
-|   |           |--  BaseTest.java
-|   |           |--  LoginTest.java
-|   |           `--  PurchaseTest.java
-|    `--  resources
-|       |--  amazon.xml
-|       `--  AmazonTestData.xlsx
+```java|-- app
+|   `-- Amazon_shopping.apk
+|-- src
+|   |-- main
+|   |   |-- java
+|   |   |   `-- com
+|   |   |       `-- amazon
+|   |   |           |-- enums
+|   |   |           |   `-- ScrollDirection.java
+|   |   |           |-- GlobalResource.java
+|   |   |           |-- util
+|   |   |           |   |-- Constants.java
+|   |   |           |   |-- HelperUtil.java
+|   |   |           |   |-- ScrollAndSwipe.java
+|   |   |           |   |-- CustomSoftAlert.java
+|   |   |           |   `-- XlDataReader.java
+|   |   |           |-- dataprovider
+|   |   |           |   `-- DataP.java
+|   |   |           |-- testnglisteners
+|   |   |           |   |-- TestListener.java
+|   |   |           |   `-- RetryAnalyzer.java
+|   |   |           `-- pages
+|   |   |               |-- CartPage.java
+|   |   |               |-- DeliverAddressPage.java
+|   |   |               |-- PaymentPage.java
+|   |   |               |-- Product.java
+|   |   |               |-- ProductDetailsPage.java
+|   |   |               |-- ProductListPage.java
+|   |   |               |-- BasePage.java
+|   |   |               |-- CheckoutPage.java
+|   |   |               |-- HomePage.java
+|   |   |               |-- AccountBasePage.java
+|   |   |               `-- LoginPage.java
+|   |   `-- resources
+|   |       |-- config.properties
+|   |       |-- log4j.properties
+|   |       `-- password.txt
+|   `-- test
+|       |-- resources
+|       |   |-- AmazonTestData.xlsx
+|       |   `-- amazon.xml
+|       `-- java
+|           `-- com
+|               `-- ui
+|                   `-- test
+|                       |-- PurchaseTest.java
+|                       |-- BaseTest.java
+|                       `-- LoginTest.java
+|-- pom.xml
+|-- log
+|   `-- logging.log
+|-- report.html
+|-- screenshots
+|   `-- ValidateLoginSuccess.png
 ```
 ### resources ###
 name | desc
@@ -72,7 +74,7 @@ XlDataReader.java | Implements xlsx file read functionality using apache.poi lib
 ### test ###
 name | desc
 ------------ | -------------
-modules | based on the app flow, modules are created. each module contains classes which represents a screen and it's operations are defined as methods
+pages | based on the app flow, pages are created. each page represents a screen and it's operations are defined as methods
 dataprovider | DataP.java class is data provider class which fetches the test data from AmazonTestData.xlsx based on the current running test
 testnglisteners | TestListener -> Extent report configured. RetryAnalyzer -> Test retry logic is implemented ( if test fails)
 util | Contains a scroll and swipe implemented class and constants class
