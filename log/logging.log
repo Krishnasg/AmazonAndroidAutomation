@@ -1,0 +1,16 @@
+2020-11-05 12:28:31 INFO  BaseTest:56 - -------- suite START [Amazon Automation Suit] --------
+2020-11-05 12:28:31 INFO  DataP:37 - Fetching ValidateLoginSuccess method data
+2020-11-05 12:28:31 INFO  GlobalResource:27 - Create global instance: start
+2020-11-05 12:28:31 INFO  GlobalResource:41 - appium server url : http://127.0.0.1:4723/wd/hub
+2020-11-05 12:28:31 INFO  GlobalResource:42 - Create global instance: end
+2020-11-05 12:29:31 INFO  TestListener:32 - ------------ ValidateLoginSuccess START ------------
+2020-11-05 12:29:31 INFO  AccountBasePage:38 - Click on already customer? Sign in button
+2020-11-05 12:29:44 INFO  LoginPage:42 - Click on login option
+2020-11-05 12:29:44 INFO  LoginPage:49 - Enter valid user emails
+2020-11-05 12:29:44 INFO  LoginPage:117 - Entering user email <Removed intentionally>
+2020-11-05 12:29:55 INFO  LoginPage:77 - Click on continue button
+2020-11-05 12:29:56 INFO  LoginPage:55 - Enter valid user password
+2020-11-05 12:29:56 INFO  LoginPage:124 - Entering user password <Removed intentionally>
+2020-11-05 12:30:01 INFO  LoginPage:71 - Click on sign in button
+2020-11-05 12:30:10 INFO  TestListener:38 - ------------ ValidateLoginSuccess END [PASS] ------------
+2020-11-05 12:30:13 INFO  BaseTest:65 - -------- suite END [Amazon Automation Suit] --------

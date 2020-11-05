@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Amazon Automation Suit" verbose="1">
+    <listeners>
+        <listener class-name="com.amazon.testnglisteners.TestListener"></listener>
+    </listeners>
+    <parameter name="platform" value="android"/>
+    <test name="Login and Purchase flow">
+        <classes>
+            <class name="com.ui.test.LoginTest" />
+            <class name="com.ui.test.PurchaseTest" />
+        </classes>
+    </test>
+</suite>
